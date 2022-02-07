@@ -1,3 +1,18 @@
 body {
   font-family: 'Nunito Sans', sans-serif;
 }
+
+.mainDiv {
+  width: 65vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.Form {
+  display: flex;
+  max-width: 20vw;
+  margin: 0;
+  flex-direction: column;
+}

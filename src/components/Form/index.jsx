@@ -1,33 +1,38 @@
-import { useState } from "react"
+import { useState } from "react";
 import "./style.css"
+const Form = ({moldTransaction}) => {
 
-const Form = ({listTransactions, setListTransactions}) => {
+    const [description, setDescription] = useState("");
+    const [value, setValue] = useState(0);
+    const [type, setType] = useState("");
 
-
-    // const [transaction, setTransaction] = useState({description: "", type: "", valor: 0})
+    const obj = {description: description, type: type, value: value};
 
     const prevent = (event) => {
         event.preventDefault();
     }
 
-    const createNewTransactionDescription = (newDescription) => {
-        setListTransactions([...listTransactions, {description: newDescription}]);
-        console.log(listTransactions)
+    const validateType = (type) => {
+        const getType = type.target.value;
+        setType(getType);
     }
 
-    const createNewTransactionValue = (newValue) => {
-        setListTransactions([...listTransactions, {value: newValue}])
-    }
 
     return (
         <form onSubmit={prevent}>
-            <input onChange={(event) => createNewTransactionDescription(event.target.value)} type="text" placeholder="Digite aqui sua descrição"></input>
-            <input onChange={(event) => createNewTransactionValue(Number(event.target.value))} type="number" placeholder="R$"></input>
-            <select>
-                <option value="Entrada">Entrada</option>
-                <option value="Saida">Saída</option>
+            <div className="form">
+                <div className="inputDescription">
+                    <input onChange={(event) => setDescription(event.target.value)} type="text" placeholder="Digite aqui sua descrição"></input>
+                </div>    
+                <div className="inputValue">
+                    <input onChange={(event) => setValue(Number(event.target.value))} type="number" placeholder="Valor R$"></input>
+                    <select className="inputsTypes" onClick={validateType}>
+                    <option value="entrada">Entrada</option>
+                    <option value="saída">Saída</option>
             </select>
-            <button onClick={() => setListTransactions(listTransactions)}>Inserir Valor</button>
+                </div>
+            <button className="buttonForm" onClick={() => moldTransaction(obj)}>Inserir</button>
+            </div>
         </form>
     )
 }

@@ -1,6 +1,6 @@
 const Card = ({transaction}) => {
     return (
-        <div className="cardTransaction">
+        <div>
             <h2>{transaction.description}</h2>
             <p>{transaction.type}</p>
             <p>{transaction.value}</p>

@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import Form from './components/Form';
-import List from './components/List';
 import "./App.css";
+import Form from './components/Form';
+import Header from './components/Header';
+import List from './components/List';
+import TotalMoney from './components/TotalMoney';
 
 function App() {
 
@@ -10,16 +12,23 @@ function App() {
     { description: "Conta de luz", type: "saída", value: -150 }
   ]);
 
-  const createTransaction = (transaction) => {
-    console.log(transaction);
+  const moldTransaction = (transaction) => {
+    return setListTransactions([...listTransactions, transaction]);
   }
 
   return (
-    <div>
-      <h1>Nu Kenzie</h1>
-      <Form createTransaction={createTransaction} listTransactions={listTransactions} setListTransactions={setListTransactions}/>
-      <List listTransactions={listTransactions}></List>
-    </div>
+    <main>
+      <Header/>
+      <div className="mainDiv">
+        <div className="Form">
+          <Form moldTransaction={moldTransaction}/>
+          <TotalMoney listTransactions={listTransactions}/>
+        </div>
+        <div className="List">
+          <List listTransactions={listTransactions}/>
+        </div>
+      </div>
+    </main>
   );
 }
 
