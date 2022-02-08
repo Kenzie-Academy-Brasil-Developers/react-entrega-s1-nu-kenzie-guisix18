@@ -8,8 +8,8 @@ import TotalMoney from './components/TotalMoney';
 function App() {
 
   const [listTransactions, setListTransactions] = useState([
-    { description: "Salário recebido", type: "entrada", value: 2500 },
-    { description: "Conta de luz", type: "saída", value: -150 }
+    // { description: "Salário recebido", type: "entrada", value: 2500 },
+    // { description: "Conta de luz", type: "saída", value: -150 }
   ]);
 
   const moldTransaction = (transaction) => {
@@ -25,6 +25,14 @@ function App() {
           <TotalMoney listTransactions={listTransactions}/>
         </div>
         <div className="List">
+          <div className="filters">
+            <h2>Resumo financeiro</h2>
+            <div className="allButtons">
+              <button className="Todos">Todos</button>
+              <button className="Entradas">Entradas</button>
+              <button className="Saídas">Saídas</button>
+            </div>
+          </div>
           <List listTransactions={listTransactions}/>
         </div>
       </div>

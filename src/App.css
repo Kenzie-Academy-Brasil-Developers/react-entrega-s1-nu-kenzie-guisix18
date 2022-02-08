@@ -1,18 +1,89 @@
 body {
   font-family: 'Nunito Sans', sans-serif;
+  width: 100vw;
 }
 
 .mainDiv {
   width: 100vw;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   margin: 0 auto;
 }
 
 .Form {
   display: flex;
-  width: 20vw;
-  margin: 0;
+  width: 30vw;
+  margin: 0 150px 0 0;
   flex-direction: column;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters h2 {
+  margin: 0;
+}
+
+.filters button {
+  padding: 12px;
+  margin: 0 10px;
+}
+
+.Todos {
+  background-color: #FD377E;
+  color: #FFF;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+}
+
+.Entradas {
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+}
+
+.Saídas {
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+}
+
+
+@media screen and (max-width: 960px) {
+  .mainDiv {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Form {
+    width: 65vw;
+    margin: 0 auto;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .filters h2 {
+    margin: 15px 0;
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+  .Form {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .Form {
+    width: 95vw;
+  }
 }

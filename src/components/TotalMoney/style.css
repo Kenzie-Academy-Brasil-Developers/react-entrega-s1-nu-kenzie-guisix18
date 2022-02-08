@@ -1,0 +1,10 @@
+.totalMoney {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    background-color: rgba(227, 73, 129, 1);
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 15px;
+}

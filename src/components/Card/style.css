@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 15px 5px;
+    margin: 15px 0;
     border-radius: 4px;
 }
 
@@ -23,4 +23,24 @@
 
 .descriType h2, p {
     margin: 15px 0;
+}
+
+.descriType p {
+    color: rgba(134, 142, 150, 1);
+}
+
+.entrie {
+    border-left: 3px solid rgba(3, 184, 152, 1);
+}
+
+.exit {
+    border-left: 3px solid rgba(233, 236, 239, 1)
+}
+
+
+@media screen and (max-width: 700px){
+    .cardTransaction {
+        width: 80vw;
+        margin: 15px auto;
+    }
 }
