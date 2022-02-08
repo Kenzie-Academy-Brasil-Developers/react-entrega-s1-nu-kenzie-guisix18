@@ -3,16 +3,16 @@ body {
 }
 
 .mainDiv {
-  width: 65vw;
+  width: 100vw;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0 auto;
 }
 
 .Form {
   display: flex;
-  max-width: 20vw;
+  width: 20vw;
   margin: 0;
   flex-direction: column;
 }
