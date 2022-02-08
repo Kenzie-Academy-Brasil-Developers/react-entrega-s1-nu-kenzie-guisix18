@@ -52,10 +52,12 @@ input, select, button {
 }
 
 .buttonForm {
+    cursor: pointer;
     border: none;
     width: 260px;
-    margin: 15px 5px;
+    margin: 25px 5px;
     padding: 8px;
     background-color: #FD377E;
     color: #fff;
+    border-radius: 8px;
 }

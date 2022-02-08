@@ -29,8 +29,8 @@ const Form = ({moldTransaction}) => {
                 <div className="inputValue">
                     <input onChange={(event) => setValue(Number(event.target.value))} type="number" placeholder="Valor R$"></input>
                     <select className="inputsTypes" onClick={validateType}>
-                    <option value="entrada">Entrada</option>
-                    <option value="saída">Saída</option>
+                    <option value="Entrada">Entrada</option>
+                    <option value="Saída">Saída</option>
                     </select>
                 </div>
             <button className="buttonForm" onClick={() => moldTransaction(obj)}>Inserir</button>

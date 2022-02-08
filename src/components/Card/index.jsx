@@ -1,10 +1,14 @@
+import "./style.css";
+
 const Card = ({transaction}) => {
     return (
-        <div>
-            <h2>{transaction.description}</h2>
-            <p>{transaction.type}</p>
+        <div className="cardTransaction">
+            <div className="descriType">
+                <h2>{transaction.description}</h2>
+                <p>{transaction.type}</p>
+            </div>
             <p>{transaction.value}</p>
-        </div>
+        </div>    
     )
 }
 

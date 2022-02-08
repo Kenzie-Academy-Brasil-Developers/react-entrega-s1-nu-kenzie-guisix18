@@ -1,0 +1,26 @@
+.cardTransaction {
+    width: 560px;
+    background-color: #F8F9FA;;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 5px;
+    border-radius: 4px;
+}
+
+.cardTransaction h2 {
+    font-size: 16px;
+}
+
+.cardTransaction h2, p {
+    margin: 0 50px;
+}
+
+.descriType {
+    margin: 5px;
+}
+
+.descriType h2, p {
+    margin: 15px 0;
+}
