@@ -83,7 +83,9 @@ body {
 }
 
 @media screen and (max-width: 300px) {
+
   .Form {
     width: 95vw;
   }
+  
 }
